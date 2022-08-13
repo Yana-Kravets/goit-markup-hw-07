@@ -14,9 +14,10 @@
     background-color: var(--accent-color);
     color: var(--main-light);
     transition: background-color var(--transition-dur-and-func);
+
+    &:hover,
+    &:focus {
+        background-color: var(--btn-color);
+    }
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
-    background-color: var(--btn-color);
-}

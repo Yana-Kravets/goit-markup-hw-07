@@ -32,14 +32,10 @@
 
 .address-item {
     margin-bottom: 9px;
-}
 
-.address-item:last-child {
-    margin-bottom: 0;
-}
-
-.address-contact {
-    text-decoration: none;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .first>a {
@@ -47,6 +43,7 @@
 }
 
 .address-contact {
+    text-decoration: none;
     font-style: normal;
     font-weight: 400;
     line-height: 1.7;
@@ -55,8 +52,6 @@
     opacity: .6;
     transition: color var(--transition-dur-and-func);
 }
-
-.footer-social {}
 
 .footer-social-title {
     margin-top: 0;
@@ -90,14 +85,12 @@
     fill: var(--main-light);
     background: rgba(255, 255, 255, 0.1);
     transition: background-color var(--transition-dur-and-func);
-}
 
-.footer-social-link:hover,
-.footer-social-link:focus {
-    background-color: var(--accent-color);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
 }
-
-.footer-form {}
 
 .footer-form-desc {
     margin-top: 0;
@@ -128,10 +121,10 @@
     background-color: var(--secondary-background);
     color: var(--main-light);
     transition: border-color var(--transition-dur-and-func);
-}
 
-.footer-form-input:focus {
-    border-color: var(--accent-color);
+    &:focus {
+        border-color: var(--accent-color);
+    }
 }
 
 .footer-form-btn {

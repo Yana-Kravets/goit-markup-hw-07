@@ -30,9 +30,10 @@
 
 .modal-close-icon {
     transition: fill var(--transition-dur-and-func);
+
+    .modal-close-btn:hover &,
+    .modal-close-btn:focus & {
+        fill: var(--accent-color);
+    }
 }
 
-.modal-close-btn:hover .modal-close-icon,
-.modal-close-btn:focus .modal-close-icon {
-    fill: var(--accent-color);
-}

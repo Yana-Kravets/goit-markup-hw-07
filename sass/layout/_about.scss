@@ -8,10 +8,10 @@
 
 .about-item {
     width: calc((100% - 90px) / 4);
-}
 
-.about-list .about-item+.about-item {
-    margin-left: 30px;
+    .about-list .about-item+& {
+        margin-left: 30px;
+    }
 }
 
 .about-icon {

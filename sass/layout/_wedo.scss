@@ -20,10 +20,10 @@
 .wedo-item {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
-}
 
-.wedo-item:last-child {
-    margin-right: 0;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .wedo-thumb {
