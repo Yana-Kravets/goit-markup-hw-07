@@ -268,21 +268,6 @@ body {
   border: transparent;
 }
 
-.header {
-  border-bottom: 1px solid var(--header-border);
-  background-color: var(--main-light);
-}
-
-.page-header {
-  display: flex;
-}
-
-.nav,
-.contact-list {
-  display: flex;
-  align-items: center;
-}
-
 .logo {
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -292,20 +277,39 @@ body {
   color: var(--logo-color);
 }
 
-.logo-text {
+.logo__text {
   color: var(--accent-color);
 }
 
-.nav-list {
+.page-header {
+  border-bottom: 1px solid var(--header-border);
+  background-color: var(--main-light);
+}
+
+.page-header-container {
+  display: flex;
+}
+
+.site-nav,
+.contact-list {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav__logo {
+  color: var(--logo-color);
+}
+
+.site-nav-list {
   display: flex;
   margin-left: 93px;
 }
 
-.nav-list .nav-item + .nav-item {
+.site-nav-list .site-nav__item + .site-nav__item {
   margin-left: 50px;
 }
 
-.nav-link {
+.site-nav__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -316,10 +320,10 @@ body {
   color: var(--primary-color);
 }
 
-.current {
+.site-nav__link_active {
   color: var(--accent-color);
 }
-.current:after {
+.site-nav__link_active:after {
   position: absolute;
   display: inline-block;
   content: "";
@@ -336,11 +340,11 @@ body {
   margin-left: auto;
 }
 
-.contact-list .contact-item + .contact-item {
+.contact-list .contact__item + .contact__item {
   margin-left: 50px;
 }
 
-.contact-link {
+.contact__link {
   padding-top: 32px;
   padding-bottom: 32px;
   display: flex;
@@ -351,12 +355,12 @@ body {
   color: var(--secondary-color);
 }
 
-.contact-link-icon {
+.contact__link_icon {
   transition: color 250ms var(--transition-dur-and-func);
   fill: currentColor;
 }
 
-.contact-icon {
+.contact__icon {
   margin-right: 10px;
 }
 
@@ -386,22 +390,22 @@ body {
   color: var(--main-light);
 }
 
-.about {
+.page-about {
   background-color: var(--main-light);
 }
 
-.about-list {
+.about {
   display: flex;
 }
 
-.about-item {
+.about__item {
   width: calc((100% - 90px) / 4);
 }
-.about-list .about-item + .about-item {
+.about .about__item + .about__item {
   margin-left: 30px;
 }
 
-.about-icon {
+.about-overlay {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
@@ -410,7 +414,7 @@ body {
   background-color: var(--primary-background);
 }
 
-.about-title {
+.about__title {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: var(--text-size);
@@ -418,7 +422,7 @@ body {
   text-transform: uppercase;
 }
 
-.about-text {
+.about__text {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.7;
@@ -674,48 +678,39 @@ body {
   color: var(--secondary-color);
 }
 
-.footer {
+.page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
   background-color: var(--secondary-background);
 }
 
-.page-footer {
+.page-footer-container {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
 
-.footer-logo {
-  font-family: var(--secondary-font);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  text-decoration: none;
+.page-footer-logo {
   color: var(--main-light);
-}
-
-.footer-text {
-  color: var(--accent-color);
 }
 
 .address {
   margin-top: 20px;
 }
 
-.address-item {
+.address-menu__item {
   margin-bottom: 9px;
 }
-.address-item:last-child {
+.address-menu__item:last-child {
   margin-bottom: 0;
 }
 
-.first > a {
+.address-menu-opacity > a {
   opacity: 1;
 }
 
-.address-contact {
+.address-menu__contact {
   text-decoration: none;
   font-style: normal;
   font-weight: 400;
@@ -734,18 +729,18 @@ body {
   color: var(--main-light);
 }
 
-.footer-social-list {
+.footer-social {
   gap: 10px;
   display: flex;
   justify-content: center;
 }
 
-.footer-social-item {
+.footer-social__item {
   width: 44px;
   height: 44px;
 }
 
-.footer-social-link {
+.footer-social__link {
   width: 100%;
   height: 100%;
   display: flex;
@@ -756,7 +751,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   transition: background-color var(--transition-dur-and-func);
 }
-.footer-social-link:hover, .footer-social-link:focus {
+.footer-social__link:hover, .footer-social__link:focus {
   background-color: var(--accent-color);
 }
 
